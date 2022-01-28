@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "expo-build": "expo build:android -t apk",
-    "eas-build": "eas build -platform android --profile=preview"
+    "eas-build": "eas build -p android --profile=preview"
   },
   "dependencies": {
     "expo": "~44.0.0",
