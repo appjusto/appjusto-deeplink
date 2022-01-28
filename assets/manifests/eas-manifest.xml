@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0.0"
+    android:compileSdkVersion="30"
+    android:compileSdkVersionCodename="11"
+    package="br.com.appjusto.deeplink"
+    platformBuildVersionCode="30"
+    platformBuildVersionName="11">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <queries>
+
+        <intent>
+
+            <action
+                android:name="android.intent.action.VIEW" />
+
+            <category
+                android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:scheme="https" />
+        </intent>
+
+        <intent>
+
+            <action
+                android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+    </queries>
+
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:theme="@ref/0x7f0d0007"
+        android:label="@ref/0x7f0c001c"
+        android:icon="@ref/0x7f0b0000"
+        android:name="br.com.appjusto.deeplink.MainApplication"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@ref/0x7f0b0002"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+        <meta-data
+            android:name="expo.modules.updates.ENABLED"
+            android:value="true" />
+
+        <meta-data
+            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+            android:value="44.0.0" />
+
+        <meta-data
+            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+            android:value="ALWAYS" />
+
+        <meta-data
+            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+            android:value="0" />
+
+        <meta-data
+            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+            android:value="https://exp.host/@appjusto/appjusto-deeplink" />
+
+        <activity
+            android:theme="@ref/0x7f0d0104"
+            android:label="@ref/0x7f0c001c"
+            android:name="br.com.appjusto.deeplink.MainActivity"
+            android:launchMode="2"
+            android:screenOrientation="1"
+            android:configChanges="0x6b0"
+            android:windowSoftInputMode="0x10">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="br.com.appjusto.deeplink" />
+            </intent-filter>
+
+            <intent-filter
+                data-generated="true">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:scheme="https"
+                    android:host="test.appjusto.com.br"
+                    android:pathPrefix="/direct" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter
+                data-generated="true">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:scheme="https"
+                    android:host="login.test.appjusto.com.br"
+                    android:pathPrefix="/join" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <provider
+            android:name="expo.modules.filesystem.FileSystemFileProvider"
+            android:exported="false"
+            android:authorities="br.com.appjusto.deeplink.FileSystemFileProvider"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@ref/0x7f0f0000" />
+        </provider>
+
+        <meta-data
+            android:name="org.unimodules.core.AppLoader#react-native-headless"
+            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+    </application>
+</manifest>
