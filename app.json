@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "appjusto-test",
-    "slug": "appjusto-test",
+    "name": "appjusto-deeplink",
+    "slug": "appjusto-deeplink",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "br.com.appjusto.test",
+      "package": "br.com.appjusto.deeplink",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
