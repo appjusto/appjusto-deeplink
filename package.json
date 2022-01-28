@@ -8,12 +8,14 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "expo-build": "expo build:android -t apk"
+    "expo-build": "expo build:android -t apk",
+    "eas-build": "eas build -platform android --profile=preview"
   },
   "dependencies": {
     "expo": "~44.0.0",
     "expo-linking": "~3.0.0",
     "expo-status-bar": "~1.2.0",
+    "firebase": "^9.6.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
