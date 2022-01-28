@@ -11,7 +11,7 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 10000
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,10 +20,33 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "br.com.appjusto.test",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "intentFilters": [
+        {
+          "autoVerify": false,
+          "action": "VIEW",
+          "data": {
+            "scheme": "https",
+            "host": "test.appjusto.com.br",
+            "pathPrefix": "/direct"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "autoVerify": false,
+          "action": "VIEW",
+          "data": {
+            "scheme": "https",
+            "host": "login.test.appjusto.com.br",
+            "pathPrefix": "/join"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
